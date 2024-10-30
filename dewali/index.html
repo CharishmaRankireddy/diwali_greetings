@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Diwali!</title>
+    <style>
+        /* Basic Body Styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #141414;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Diwali Message Styling */
+        .diwali-message {
+            font-size: 3em;
+            text-align: center;
+            color: #ffd700;
+            text-shadow: 0 0 20px #ffd700, 0 0 40px #ff8c00;
+            animation: glow 1.5s infinite alternate;
+            position: relative;
+            z-index: 5;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ff8c00; }
+            50% { text-shadow: 0 0 25px #ffa500, 0 0 45px #ff4500; }
+        }
+
+        /* Twinkling Lights */
+        .twinkling-lights {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .light {
+            width: 15px;
+            height: 15px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            box-shadow: 0 0 10px #ffeb3b, 0 0 20px #ff8c00;
+            animation: twinkle 1s infinite alternate;
+        }
+
+        /* Twinkle Animation */
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        /* Rocket Fireworks */
+        .rocket {
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 20px;
+            background: linear-gradient(to top, #ff4500, #ff6347);
+            animation: launch 3s infinite ease-in-out;
+            box-shadow: 0 0 15px #ff4500;
+        }
+
+        @keyframes launch {
+            0% { transform: translateY(0); opacity: 1; }
+            80% { transform: translateY(-80vh); opacity: 1; }
+            90% { opacity: 0.5; }
+            100% { transform: translateY(-100vh); opacity: 0; }
+        }
+
+        .explosion {
+            position: absolute;
+            width: 5px;
+            height: 5px;
+            background-color: #ffeb3b;
+            border-radius: 50%;
+            opacity: 0;
+            animation: explode 0.5s infinite;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(0); opacity: 1; }
+            100% { transform: scale(3); opacity: 0; }
+        }
+
+        /* Floating Diyas */
+        .diya {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            background: #ff4500;
+            border-radius: 50% 50% 0 0;
+            bottom: 20px;
+            animation: floatDiya 3s infinite alternate;
+        }
+
+        /* Flame */
+        .flame {
+            width: 15px;
+            height: 30px;
+            background: #ffd700;
+            border-radius: 50% 50% 0 0;
+            position: absolute;
+            top: -30px;
+            left: 22px;
+            animation: flicker 0.5s infinite alternate;
+            box-shadow: 0 0 10px #ffd700;
+        }
+
+        /* Diya and Flame Animations */
+        @keyframes floatDiya {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(10px); }
+        }
+
+        @keyframes flicker {
+            0%, 100% { transform: translateX(0); opacity: 0.9; }
+            50% { transform: translateX(2px); opacity: 1; }
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Twinkling Lights at the Top -->
+    <div class="twinkling-lights">
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+        <div class="light"></div>
+    </div>
+
+    <!-- Diwali Message -->
+    <div class="diwali-message">✨ Happy Diwali! ✨</div>
+
+    <!-- Rocket Fireworks -->
+    <div class="rocket" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="rocket" style="left: 40%; animation-delay: 1.5s;"></div>
+    <div class="rocket" style="left: 60%; animation-delay: 2s;"></div>
+    <div class="rocket" style="left: 80%; animation-delay: 2.5s;"></div>
+
+    <!-- Rocket Explosions -->
+    <div class="explosion" style="top: 20%; left: 20%; animation-delay: 1.3s;"></div>
+    <div class="explosion" style="top: 10%; left: 40%; animation-delay: 1.8s;"></div>
+    <div class="explosion" style="top: 15%; left: 60%; animation-delay: 2.3s;"></div>
+    <div class="explosion" style="top: 25%; left: 80%; animation-delay: 2.8s;"></div>
+
+    <!-- Diyas at the Bottom -->
+    <div class="diya" style="left: 15%; animation-delay: 0s;">
+        <div class="flame"></div>
+    </div>
+    <div class="diya" style="left: 45%; animation-delay: 1s;">
+        <div class="flame"></div>
+    </div>
+    <div class="diya" style="left: 75%; animation-delay: 0.5s;">
+        <div class="flame"></div>
+    </div>
+
+</body>
+</html>
